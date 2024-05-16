@@ -187,7 +187,6 @@ class _YearPickerState extends State<YearPicker> {
     assert(debugCheckHasMaterial(context));
     return Column(
       children: <Widget>[
-        const Divider(),
         Expanded(
           child: GridView.builder(
             controller: _scrollController,
@@ -198,7 +197,6 @@ class _YearPickerState extends State<YearPicker> {
             padding: const EdgeInsets.symmetric(horizontal: _yearPickerPadding),
           ),
         ),
-        const Divider(),
       ],
     );
   }
