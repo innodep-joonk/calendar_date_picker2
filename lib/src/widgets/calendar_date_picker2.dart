@@ -334,8 +334,8 @@ class _CalendarDatePicker2State extends State<CalendarDatePicker2> {
         );
       case CalendarDatePicker2Mode.year:
         return Padding(
-          padding: EdgeInsets.only(
-              top: widget.config.controlsHeight ?? _subHeaderHeight),
+          padding: EdgeInsets.fromLTRB(
+              16, widget.config.controlsHeight ?? _subHeaderHeight, 16, 0),
           child: YearPicker(
             config: widget.config,
             key: _yearPickerKey,
