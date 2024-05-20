@@ -185,19 +185,28 @@ class _YearPickerState extends State<YearPicker> {
   @override
   Widget build(BuildContext context) {
     assert(debugCheckHasMaterial(context));
-    return Column(
-      children: <Widget>[
-        Expanded(
-          child: GridView.builder(
-            controller: _scrollController,
-            dragStartBehavior: widget.dragStartBehavior,
-            gridDelegate: _yearPickerGridDelegate,
-            itemBuilder: _buildYearItem,
-            itemCount: math.max(_itemCount, minYears),
-            padding: const EdgeInsets.symmetric(horizontal: _yearPickerPadding),
+    return Container(
+      decoration: BoxDecoration(
+          color: const Color(0xff2C2C2C),
+          borderRadius: BorderRadius.circular(4),
+          border: Border.all(
+            color: const Color(0xff454545),
+          )),
+      child: Column(
+        children: <Widget>[
+          Expanded(
+            child: GridView.builder(
+              controller: _scrollController,
+              dragStartBehavior: widget.dragStartBehavior,
+              gridDelegate: _yearPickerGridDelegate,
+              itemBuilder: _buildYearItem,
+              itemCount: math.max(_itemCount, minYears),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: _yearPickerPadding),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
