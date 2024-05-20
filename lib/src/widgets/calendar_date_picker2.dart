@@ -333,7 +333,13 @@ class _CalendarDatePicker2State extends State<CalendarDatePicker2> {
           ),
         );
       case CalendarDatePicker2Mode.year:
-        return Padding(
+        return Container(
+          decoration: BoxDecoration(
+              color: const Color(0xff2C2C2C),
+              borderRadius: BorderRadius.circular(4),
+              border: Border.all(
+                color: const Color(0xff454545),
+              )),
           padding: EdgeInsets.only(
               top: widget.config.controlsHeight ?? _subHeaderHeight),
           child: YearPicker(
